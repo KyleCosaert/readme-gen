@@ -1,3 +1,4 @@
+// function for license badges
 function renderLicenseBadge(licenseBadge) {
 
     if (licenseBadge !== 'No license') {
@@ -24,9 +25,7 @@ function renderLicenseBadge(licenseBadge) {
   };
   
   
-  
-  // TODO: Create a function that returns the license link
-  // If there is no license, return an empty string
+  // returns empty string if no license is used
   function renderLicenseLink(licenseLink) {
   
     if (licenseLink !== 'No license') {
@@ -52,8 +51,7 @@ function renderLicenseBadge(licenseBadge) {
     }
   }
   
-  // TODO: Create a function that returns the license section of README
-  // If there is no license, return an empty string
+  // returns empty string if no license is used
   function renderLicenseSection(license) {
   
     if (license !== 'No license') {

@@ -1,11 +1,13 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 
 const generatePage = require('./utils/generateMarkdown.js')
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [{
+
+    // title of project
     type: 'input',
     name: 'title',
     message: 'What is your project title?',
@@ -14,6 +16,7 @@ const questions = [{
     },
 },
 {
+    // repo name
     type: 'input',
     name: 'repo',
     message: 'What is the repository name of your project?',
@@ -22,6 +25,7 @@ const questions = [{
     },
 },
 {
+    // for the description of the project
     type: 'input',
     name: 'description',
     message: 'What is the description of your project?',
@@ -30,6 +34,7 @@ const questions = [{
     },
 },
 {
+    // installation of the project 
     type: 'input',
     name: 'installation',
     message: 'Enter instructions for installation',
@@ -38,6 +43,7 @@ const questions = [{
     },
 },
 {
+    // usage of the project
     type: 'input',
     name: 'usage',
     message: 'What is the usage information?',
@@ -46,6 +52,7 @@ const questions = [{
     },
 },
 {
+    // contributers
     type: 'input',
     name: 'contribution',
     message: 'What are contribution guidelines?',
@@ -54,6 +61,7 @@ const questions = [{
     },
 },
 {
+    // test instructions
     type: 'input',
     name: 'test',
     message: 'What are the test instructions?',
@@ -62,14 +70,14 @@ const questions = [{
     },
 },
 {
+    // license used for project
     type: 'list',
     name: 'license',
     message: 'Choose a license for your project?',
     choices: ["Apache", "BSD 3", "GNU GPLv3.0", "MIT", "No license"]
-    // if (value) { return true } else { return 'Please choose a license.' }
-    // },
 },
 {
+    // username for GitHub
     type: 'input',
     name: 'github',
     message: 'What is your GitHub username?',
@@ -78,6 +86,7 @@ const questions = [{
     },
 },
 {
+    // email
     type: 'input',
     name: 'email',
     message: 'What is your email address?',
@@ -89,7 +98,7 @@ const questions = [{
 }
 ];
 
-// TODO: Create a function to write README file
+// function for the  write README file
 function writeToFile(fileName, data) {
 
     fs.writeFile(fileName, data, (err) =>
@@ -99,7 +108,7 @@ function writeToFile(fileName, data) {
 
 
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
 
     inquirer.prompt(questions)
